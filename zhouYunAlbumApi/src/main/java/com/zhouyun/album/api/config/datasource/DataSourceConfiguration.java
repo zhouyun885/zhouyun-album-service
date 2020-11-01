@@ -28,7 +28,7 @@ import java.util.Map;
 
 @MapperScan(
         basePackages = {
-                "com.springboot.zhouyun.mapper"
+                "com.zhouyun.album.mapper"
         },
         sqlSessionFactoryRef = "sqlSessionFactory")
 @Configuration
@@ -36,7 +36,7 @@ import java.util.Map;
 @EnableConfigurationProperties({SpringBootDataSourceProperties.class})
 public class DataSourceConfiguration {
     private static final int TX_METHOD_TIMEOUT = 60;
-    private static final String AOP_POINTCUT_EXPRESSION = "execution (* com.springboot.zhouyun.service.biz..*(..))";
+    private static final String AOP_POINTCUT_EXPRESSION = "execution (* com.zhouyun.album.service.biz..*(..))";
 
     private final SpringBootDataSourceProperties springBootDataSourceProperties;
 
@@ -74,7 +74,7 @@ public class DataSourceConfiguration {
      * @return
      * @throws Exception
      */
-    @Bean(name = "sqlSessionFactory_publishresource")
+    @Bean(name = "sqlSessionFactory")
     public SqlSessionFactory sqlSessionFactory(@Qualifier("dataSource") DataSource rdsDataSource) throws Exception {
         return DataSourceFactory.createSqlSessionFactoryBean(rdsDataSource, new String[]{"classpath:mapper/**/*.xml"}).getObject();
     }

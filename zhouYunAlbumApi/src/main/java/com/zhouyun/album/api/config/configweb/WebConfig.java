@@ -1,8 +1,6 @@
 package com.zhouyun.album.api.config.configweb;
 
 
-
-
 import com.zhouyun.album.api.interceptor.AuthRestInterceptor;
 import com.zhouyun.core.handler.GlobalExceptionHandler;
 import org.springframework.context.annotation.Bean;
@@ -14,9 +12,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import java.util.ArrayList;
 import java.util.Collections;
 
-
 @Primary
-@Configuration("adminWebConfig")
+@Configuration
 public class WebConfig implements WebMvcConfigurer {
 
     @Bean

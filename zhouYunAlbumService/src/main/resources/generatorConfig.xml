@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
     <classPathEntry
-            location="E:\maven-rep-zgc\mysql\mysql-connector-java\5.1.35\mysql-connector-java-5.1.35.jar"></classPathEntry>
+            location="F:\local_warehouse\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar"></classPathEntry>
 
     <context id="context1">
         <commentGenerator>
@@ -12,8 +12,8 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/dev_ly_tray_basicdata"
-                        userId="root"
+                        connectionURL="jdbc:mysql://106.14.239.111:3306/db_zhouyun_record_album"
+                        userId="dev"
                         password="123456">
         </jdbcConnection>
 
@@ -25,7 +25,7 @@
 
 
         <!-- 表結構對應實體存放目录 -->
-        <javaModelGenerator targetPackage="com.springboot.zhouyun.service.entity"
+        <javaModelGenerator targetPackage="com.zhouyun.album.service.entity"
                             targetProject="src/main/java"/>
 
         <!-- mapper xml文件存放目录 -->
@@ -33,11 +33,11 @@
                          targetProject="src/main/resources"/>
 
         <!-- mapper java 接口存放目录 -->
-        <javaClientGenerator targetPackage="com.springboot.zhouyun.service.mapper"
+        <javaClientGenerator targetPackage="com.zhouyun.album.service.mapper"
                              targetProject="src/main/java" type="XMLMAPPER"/>
 
 
-        <table tableName="t_account" domainObjectName="TAccount"
+        <table tableName="t_user" domainObjectName="TUser"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">

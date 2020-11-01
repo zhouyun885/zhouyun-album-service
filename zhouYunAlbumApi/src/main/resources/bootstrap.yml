@@ -37,7 +37,7 @@ auth:
     expire: 14400
 
 swagger2:
-  package: com.zhouyun.album.controller
+  package: com.zhouyun.album.api.controller
   service:
     name: 相册服务
     description: 周云的相册服务接口

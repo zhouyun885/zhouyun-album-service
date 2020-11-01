@@ -8,11 +8,11 @@ server:
 database:
   mysql:
     admin:
-      database: dev_ly_tray_basicdata
+      database: db_zhouyun_record_album
       driverClassName: com.mysql.jdbc.Driver
-      host: localhost
+      host: 106.14.239.111
       port: 3306
-      username: root
+      username: dev
       password: Bq2W0n3nXOPScwE9SZhozV9LMsP9HxevrAYa1KncgIDmwvERazuyAWxJPO7v4OkGrMak1cUBwQmJjke03y4KQw==
       configDecrypt: true
       configDecryptkey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIaYR4jxofgZRrHD1FKVF7k3h230YXnrEHejV0W1BDoURGB9xmhDEGq5IctgTuE0FFU5lHBjVSWr/dC0G1PPby8CAwEAAQ==
