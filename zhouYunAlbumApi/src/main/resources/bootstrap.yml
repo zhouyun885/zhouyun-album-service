@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: zhouYunAlbum-services
+#  cloud:
+#    config:
+#      label: master
+#      profile: ${env}
+#      uri: http://rogateway.hiyelo.com/TRAY-MICROSERVICE-CONFIG/
+  profiles:
+    active: ${env}
+
+management:
+  endpoint:
+    health:
+      sensitive: false
+      show-details: always
+    shutdown:
+      enabled: true #启用shutdown
+      sensitive: false #禁用密码验证
+    loggers:
+      enabled: true #启用loggers
+      sensitive: false #禁用密码验证
+  endpoints:
+    web:
+      exposure:
+        include: shutdown,refresh,health,info,prometheus
+
+auth:
+  serviceId: zhouYunAlbum
+  client:
+    id: zhouYunAlbum-service
+    token-header: token
+    pub-key:
+      path: client/public.key
+    pri-key:
+      path: client/private.key
+    expire: 14400
+
+swagger2:
+  package: com.zhouyun.album.controller
+  service:
+    name: 相册服务
+    description: 周云的相册服务接口
+    contact:
+      name: 相册服务
+      url: http://www.zhouyun.com/
+      email: zhouyun885@163.com

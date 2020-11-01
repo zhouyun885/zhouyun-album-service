@@ -3,16 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.zhouyun</groupId>
-    <artifactId>springboot-service</artifactId>
+    <artifactId>zhouYunAlbum-service</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>springboot-service</name>
-    <description>springboot-service</description>
+    <name>zhouYunAlbum-service</name>
+    <description>zhouYunAlbum-service</description>
     <modules>
-        <module>springBootApi</module>
-        <module>springBootService</module>
-        <module>springBootBase</module>
+        <module>zhouYunAlbumApi</module>
+        <module>zhouYunAlbumService</module>
+        <module>zhouYunAlbumBase</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
